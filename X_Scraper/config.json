@@ -1,0 +1,80 @@
+{
+    "scrapeSettings": {
+        "headlessMode": false,
+        "browser": "chrome",
+        "timeOut": 30,
+        "scrollDelay": {
+            "min": 3,
+            "max": 7
+        },
+        "actionDelay": {
+            "min": 2,
+            "max": 4
+        }
+    },
+    "socialMediaPlatforms": {
+        "X": {
+            "accounts": [
+                "BillGates",
+                "elonmusk",
+                "NASA",
+                "MKBHD",
+                "verge"
+            ]
+        },
+        "Instagram": {
+            "accounts": [
+                "natgeo",
+                "instagram"
+            ],
+            "postsPerProfile": 20,
+            "scrapeComments": true,
+            "maxCommentsPerPost": 50,
+            "scrapeType": "recent"
+        },
+        "TikTok": {
+            "accounts": []
+        },
+        "Facebook": {
+            "accounts": []
+        }
+    },
+    "credentials": {
+        "X": {
+            "username": "ENTER_YOUR_USERNAME",
+            "password": "ENTER_YOUR_PASSWORD",
+            "e_mail": "ENTER_YOUR_EMAIL_TO BY BASS 2FA IF IT REQUIRED"
+        },
+        "Instagram": {
+            "username": "...",
+            "password": "...",
+            "recoveryEmail": "ENTER_RECOVERY_EMAIL"
+        }
+    },
+    "logging": {
+        "level": "DEBUG",
+        "logToFile": true,
+        "logFilePath": "scraper_logs.log",
+        "rotateLogsDaily": true,
+        "maxLogFiles": 7
+    },
+    "output": {
+        "format": "json",
+        "directory": "scraped_data",
+        "filenamePrefix": "instagram_scrape",
+        "includeTimestamp": true
+    },
+    "errorHandling": {
+        "maxRetries": 3,
+        "retryDelay": 5,
+        "skipFailedProfiles": true
+    },
+    "proxy": {
+        "enabled": false,
+        "type": "http",
+        "host": "",
+        "port": "",
+        "username": "",
+        "password": ""
+    }
+}

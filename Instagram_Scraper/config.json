@@ -1,0 +1,125 @@
+{
+    "scrapeSettings": {
+        "headlessMode": false,
+        "browser": "chrome",
+        "timeOut": 60,
+        "scrollDelay": {
+            "min": 8,
+            "max": 15
+        },
+        "actionDelay": {
+            "min": 5,
+            "max": 10
+        },
+        "retryAttempts": {
+            "selectors": 3,
+            "loadMore": 2
+        },
+        "antiDetection": {
+            "randomizeViewport": true,
+            "viewportRanges": {
+                "width": {
+                    "min": 1024,
+                    "max": 1920
+                },
+                "height": {
+                    "min": 768,
+                    "max": 1080
+                }
+            },
+            "mouseMovements": {
+                "enabled": true,
+                "frequency": "medium",
+                "patternVariation": true
+            },
+            "keyboardInput": {
+                "randomDelay": true,
+                "delayRanges": {
+                    "min": 0.1,
+                    "max": 0.3
+                },
+                "typoSimulation": {
+                    "enabled": true,
+                    "frequency": 0.05
+                }
+            }
+        }
+    },
+    "socialMediaPlatforms": {
+        "Instagram": {
+            "accounts": [
+                "natgeo",
+                "instagram"
+            ],
+            "postsPerProfile": 1,
+            "scrapeComments": true,
+            "maxCommentsPerPost": 50,
+            "scrapeType": "recent",
+            "maxSessionDuration": 3600,
+            "maxPostsPerHour": 20,
+            "loginRetries": 3,
+            "commentExtractionStrategies": [
+                "meta",
+                "directSelector",
+                "viewAll",
+                "dialog"
+            ]
+        }
+    },
+    "credentials": {
+        "Instagram": {
+            "username": "ENTER_YOUR_USERNAME",
+            "password": "ENTER_YOUR_PASSWORD"
+        }
+    },
+    "logging": {
+        "level": "DEBUG",
+        "logToFile": true,
+        "logFilePath": "instagram_debug.log",
+        "rotateLogsDaily": true,
+        "maxLogFiles": 7,
+        "includeSelectors": true,
+        "includeNetworkLogs": true,
+        "logFailedSelectors": true
+    },
+    "output": {
+        "format": "json",
+        "directory": "instagram_data",
+        "filenamePrefix": "instagram_scrape",
+        "includeTimestamp": true,
+        "backupEnabled": true,
+        "compressionEnabled": true
+    },
+    "errorHandling": {
+        "maxRetries": 5,
+        "retryDelay": 15,
+        "skipFailedProfiles": true,
+        "saveFailedAttempts": true,
+        "exponentialBackoff": true
+    },
+    "proxy": {
+        "enabled": true,
+        "type": "http",
+        "rotation": {
+            "enabled": true,
+            "interval": 600
+        },
+        "providers": [
+            {
+                "host": "ENTER_PROXY_HOST",
+                "port": "ENTER_PROXY_PORT",
+                "username": "ENTER_PROXY_USERNAME",
+                "password": "ENTER_PROXY_PASSWORD"
+            }
+        ]
+    },
+    "security": {
+        "useRandomUserAgent": true,
+        "rotateUserAgent": true,
+        "fingerprint": {
+            "enabled": true,
+            "osVariation": true,
+            "browserVariation": true
+        }
+    }
+}
