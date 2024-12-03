@@ -1,0 +1,17 @@
+{
+    "login": {
+        "url": "https://www.tiktok.com/login/phone-or-email/email",
+        "email": "dontmatter_16",
+        "password": ":9:;A/z~W(xi4C="
+    },
+    "captcha_api_key": "5383164b93f50df203eeb761e2f39794",
+    "target_profiles": [
+        "khaby.lame",
+        "BillNye",
+        "natgeo"
+    ],
+    "output_file": "tiktok_data.json",
+    "headless": false
+}
+
+
